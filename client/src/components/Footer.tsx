@@ -2,13 +2,13 @@ import { Facebook, Twitter, Linkedin, Youtube, ChevronRight } from "lucide-react
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-dark text-white pt-16 pb-8">
+    <footer className="bg-[#1a1a1a] text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold font-roboto mb-6">CÔNG TY XÂY DỰNG HOÀNG LONG</h3>
-            <p className="mb-4">
+            <h3 className="text-xl font-bold font-roboto mb-6 text-white">CÔNG TY XÂY DỰNG HOÀNG LONG</h3>
+            <p className="mb-4 text-white">
               Với hơn 15 năm kinh nghiệm, chúng tôi tự hào là đơn vị xây dựng uy tín hàng đầu tại Việt Nam.
             </p>
             <div className="flex space-x-4 mt-6">
@@ -45,43 +45,43 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold font-roboto mb-6">Liên Kết Nhanh</h3>
+            <h3 className="text-xl font-bold font-roboto mb-6 text-white">Liên Kết Nhanh</h3>
             <ul className="space-y-3">
               <li>
                 <a 
                   href="/" 
-                  className="hover:text-[#f7a100] transition duration-300"
+                  className="text-white hover:text-[#f7a100] transition duration-300"
                 >
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Trang chủ
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#about" className="text-white hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Giới thiệu
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="text-white hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Dịch vụ
                 </a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#projects" className="text-white hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Dự án
                 </a>
               </li>
               <li>
-                <a href="#team" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#team" className="text-white hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Đội ngũ
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#contact" className="text-white hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Liên hệ
                 </a>
@@ -91,40 +91,40 @@ const Footer = () => {
           
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold font-roboto mb-6">Dịch Vụ</h3>
+            <h3 className="text-xl font-bold font-roboto mb-6 text-white">Dịch Vụ</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="text-white hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Xây dựng dân dụng
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="text-white hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Xây dựng công nghiệp
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="text-white hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Thiết kế nội thất
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="text-white hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Tư vấn thiết kế
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="text-white hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Cho thuê thiết bị
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="text-white hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Công trình giao thông
                 </a>
@@ -134,8 +134,8 @@ const Footer = () => {
           
           {/* Newsletter */}
           <div>
-            <h3 className="text-xl font-bold font-roboto mb-6">Đăng Ký Nhận Tin</h3>
-            <p className="mb-4">
+            <h3 className="text-xl font-bold font-roboto mb-6 text-white">Đăng Ký Nhận Tin</h3>
+            <p className="mb-4 text-white">
               Đăng ký để nhận thông tin mới nhất về dịch vụ và dự án của chúng tôi.
             </p>
             <form className="mb-4" onSubmit={(e) => e.preventDefault()}>
@@ -167,7 +167,7 @@ const Footer = () => {
         <hr className="border-white border-opacity-20 mb-8" />
         
         {/* Copyright */}
-        <div className="text-center text-sm">
+        <div className="text-center">
           <p className="text-white font-medium">
             &copy; {new Date().getFullYear()} Công Ty Xây Dựng Hoàng Long. Tất cả quyền được bảo lưu.
           </p>
