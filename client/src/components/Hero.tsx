@@ -9,7 +9,7 @@ const slides = [
     title: "Chất Lượng Xây Dựng Đẳng Cấp",
     description: "Hơn 15 năm kinh nghiệm trong lĩnh vực xây dựng công trình dân dụng và công nghiệp",
     buttons: [
-      { text: "Liên Hệ Ngay", link: "#contact", variant: "primary" },
+      { text: "Liên Hệ Ngay", link: "#footer", variant: "primary" },
       { text: "Dự Án Của Chúng Tôi", link: "#projects", variant: "outline" }
     ]
   },
@@ -30,7 +30,7 @@ const slides = [
     description: "Với đội ngũ kỹ sư và công nhân lành nghề, chúng tôi sẵn sàng đáp ứng mọi yêu cầu của khách hàng",
     buttons: [
       { text: "Đội Ngũ", link: "#team", variant: "primary" },
-      { text: "Tư Vấn Miễn Phí", link: "#contact", variant: "outline" }
+      { text: "Tư Vấn Miễn Phí", link: "#footer", variant: "outline" }
     ]
   },
 ];
@@ -49,7 +49,6 @@ const Hero = () => {
             }`}
             style={{ backgroundImage: `url('${slide.image}')` }}
           >
-            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
             <div className="container mx-auto px-4 h-full flex items-center">
               <div className="max-w-2xl text-white">
                 <h1 className="text-4xl md:text-5xl font-bold font-roboto mb-4">{slide.title}</h1>

@@ -186,7 +186,7 @@ export const testimonialData: Testimonial[] = [
     id: 1,
     name: "Nguyễn Văn Minh",
     position: "Giám đốc Công ty ABC",
-    content: "Chúng tôi rất hài lòng về chất lượng công trình và tiến độ thi công của Công ty Xây dựng Hoàng Long. Đội ngũ kỹ sư chuyên nghiệp và tận tâm, luôn lắng nghe và đáp ứng mọi yêu cầu của chúng tôi.",
+    content: "Chúng tôi rất hài lòng về chất lượng công trình và tiến độ thi công của Công ty Xây dựng Minh Thanh. Đội ngũ kỹ sư chuyên nghiệp và tận tâm, luôn lắng nghe và đáp ứng mọi yêu cầu của chúng tôi.",
     rating: 5,
     imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
   },
@@ -194,7 +194,7 @@ export const testimonialData: Testimonial[] = [
     id: 2,
     name: "Trần Thị Hoa",
     position: "Chủ đầu tư Dự án XYZ",
-    content: "Tôi đã hợp tác với nhiều công ty xây dựng, nhưng Hoàng Long là đơn vị chuyên nghiệp nhất. Dự án của tôi được hoàn thành đúng tiến độ với chất lượng vượt trội và chi phí hợp lý.",
+    content: "Tôi đã hợp tác với nhiều công ty xây dựng, nhưng Minh Thanh là đơn vị chuyên nghiệp nhất. Dự án của tôi được hoàn thành đúng tiến độ với chất lượng vượt trội và chi phí hợp lý.",
     rating: 5,
     imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
   },
@@ -202,7 +202,7 @@ export const testimonialData: Testimonial[] = [
     id: 3,
     name: "Lê Hoàng Nam",
     position: "Giám đốc Công ty XNK",
-    content: "Đội ngũ thiết kế của Hoàng Long đã hiểu rõ nhu cầu và mang đến giải pháp tuyệt vời cho dự án của chúng tôi. Tôi đặc biệt hài lòng với sự tận tâm và khả năng giải quyết vấn đề của họ.",
+    content: "Đội ngũ thiết kế của Minh Thanh đã hiểu rõ nhu cầu và mang đến giải pháp tuyệt vời cho dự án của chúng tôi. Tôi đặc biệt hài lòng với sự tận tâm và khả năng giải quyết vấn đề của họ.",
     rating: 4.5,
     imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
   },
@@ -210,7 +210,7 @@ export const testimonialData: Testimonial[] = [
     id: 4,
     name: "Phạm Thị Lan",
     position: "Khách hàng cá nhân",
-    content: "Tôi vô cùng hài lòng với kết quả công trình nhà ở do Hoàng Long thi công. Từ khâu tư vấn, thiết kế đến thi công đều chuyên nghiệp, tỉ mỉ và đảm bảo chất lượng.",
+    content: "Tôi vô cùng hài lòng với kết quả công trình nhà ở do Minh Thanh thi công. Từ khâu tư vấn, thiết kế đến thi công đều chuyên nghiệp, tỉ mỉ và đảm bảo chất lượng.",
     rating: 5,
     imageUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
   }

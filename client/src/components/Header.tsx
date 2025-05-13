@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
+import logo from "../image/logo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,37 +21,64 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 bg-white ${isScrolled ? 'shadow-md' : ''} transition-shadow duration-300`}>
+    <header
+      className={`sticky top-0 z-50 bg-white ${
+        isScrolled ? "shadow-md" : ""
+      } transition-shadow duration-300`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl md:text-3xl font-bold font-roboto">
-              <span className="text-[#f7a100]">XÂY DỰNG</span>{" "}
-              <span className="text-[#004d99]">HOÀNG LONG</span>
+            <div className="text-2xl md:text-3xl font-bold font-roboto flex items-center gap-2">
+              <img
+                src={logo}
+                alt="Construction Connect Logo"
+                className="h-12"
+              />
+              <span className="text-[#f7a100]">XÂY DỰNG</span>
+              <span className="text-[#004d99]">MINH THANH</span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link href="/">
-              <a className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300">
+              <a
+                href="/"
+                className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300"
+              >
                 Trang chủ
               </a>
             </Link>
-            <a href="#about" className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300">
+            <a
+              href="#about"
+              className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300"
+            >
               Giới thiệu
             </a>
-            <a href="#services" className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300">
+            <a
+              href="#services"
+              className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300"
+            >
               Dịch vụ
             </a>
-            <a href="#projects" className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300">
+            <a
+              href="#projects"
+              className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300"
+            >
               Dự án
             </a>
-            <a href="#team" className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300">
+            <a
+              href="#team"
+              className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300"
+            >
               Đội ngũ
             </a>
-            <a href="#contact" className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300">
+            <a
+              href="#footer"
+              className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300"
+            >
               Liên hệ
             </a>
           </nav>
@@ -71,40 +99,44 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden pb-4">
             <Link href="/">
-              <a onClick={() => setIsMenuOpen(false)} className="block py-2 font-medium text-neutral-dark hover:text-[#004d99]">
+              <a
+                href="/"
+                onClick={() => setIsMenuOpen(false)}
+                className="block py-2 font-medium text-neutral-dark hover:text-[#004d99]"
+              >
                 Trang chủ
               </a>
             </Link>
-            <a 
-              href="#about" 
+            <a
+              href="#about"
               onClick={() => setIsMenuOpen(false)}
               className="block py-2 font-medium text-neutral-dark hover:text-[#004d99]"
             >
               Giới thiệu
             </a>
-            <a 
-              href="#services" 
+            <a
+              href="#services"
               onClick={() => setIsMenuOpen(false)}
               className="block py-2 font-medium text-neutral-dark hover:text-[#004d99]"
             >
               Dịch vụ
             </a>
-            <a 
-              href="#projects" 
+            <a
+              href="#projects"
               onClick={() => setIsMenuOpen(false)}
               className="block py-2 font-medium text-neutral-dark hover:text-[#004d99]"
             >
               Dự án
             </a>
-            <a 
-              href="#team" 
+            <a
+              href="#team"
               onClick={() => setIsMenuOpen(false)}
               className="block py-2 font-medium text-neutral-dark hover:text-[#004d99]"
             >
               Đội ngũ
             </a>
-            <a 
-              href="#contact" 
+            <a
+              href="#footer"
               onClick={() => setIsMenuOpen(false)}
               className="block py-2 font-medium text-neutral-dark hover:text-[#004d99]"
             >

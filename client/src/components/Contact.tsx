@@ -3,14 +3,36 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { contactFormSchema } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import {
+  FaDiscord,
+  FaFacebook,
+  FaInstagram,
+  FaTiktok,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+import BCT_IMG from "../image/bct.jpg";
 
 // Type for the contact form
 type ContactFormValues = {
@@ -39,21 +61,23 @@ const Contact = () => {
 
   // Setup mutation
   const mutation = useMutation({
-    mutationFn: (data: ContactFormValues) => 
+    mutationFn: (data: ContactFormValues) =>
       apiRequest("POST", "/api/contact", data),
     onSuccess: async (response) => {
       const data = await response.json();
       if (data.success) {
         toast({
           title: "Thành công!",
-          description: "Thông tin của bạn đã được gửi thành công. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất!",
+          description:
+            "Thông tin của bạn đã được gửi thành công. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất!",
           variant: "default",
         });
         setIsSubmitted(true);
       } else {
         toast({
           title: "Có lỗi xảy ra!",
-          description: data.message || "Không thể gửi biểu mẫu. Vui lòng thử lại sau.",
+          description:
+            data.message || "Không thể gửi biểu mẫu. Vui lòng thử lại sau.",
           variant: "destructive",
         });
       }
@@ -81,7 +105,8 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-[#f7a100] mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg">
-            Hãy liên hệ với chúng tôi để được tư vấn và báo giá miễn phí cho dự án của bạn.
+            Hãy liên hệ với chúng tôi để được tư vấn và báo giá miễn phí cho dự
+            án của bạn.
           </p>
         </div>
 
@@ -141,10 +166,16 @@ const Contact = () => {
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <div className="w-full h-64 bg-gray-200 rounded">
                 <div className="w-full h-full flex items-center justify-center bg-gray-100 border border-gray-300">
-                  <span className="text-gray-500 text-center">
-                    <MapPin className="mx-auto mb-2" size={32} />
-                    Google Maps sẽ được hiển thị ở đây
-                  </span>
+                  <iframe
+                    src="https://www.google.com/maps?q=20.940672,106.271153&z=15&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Google Maps Location"
+                  />
                 </div>
               </div>
             </div>
@@ -160,12 +191,18 @@ const Contact = () => {
               <div className="p-4 bg-green-100 text-green-700 rounded-md">
                 <div className="flex items-center">
                   <div className="mr-2">✓</div>
-                  <div>Thông tin của bạn đã được gửi thành công. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất!</div>
+                  <div>
+                    Thông tin của bạn đã được gửi thành công. Chúng tôi sẽ liên
+                    hệ lại trong thời gian sớm nhất!
+                  </div>
                 </div>
               </div>
             ) : (
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
@@ -204,7 +241,10 @@ const Contact = () => {
                         <FormItem>
                           <FormLabel>Số điện thoại</FormLabel>
                           <FormControl>
-                            <Input placeholder="Nhập số điện thoại" {...field} />
+                            <Input
+                              placeholder="Nhập số điện thoại"
+                              {...field}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -227,10 +267,18 @@ const Contact = () => {
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="Tư vấn dự án">Tư vấn dự án</SelectItem>
-                              <SelectItem value="Báo giá xây dựng">Báo giá xây dựng</SelectItem>
-                              <SelectItem value="Thiết kế kiến trúc">Thiết kế kiến trúc</SelectItem>
-                              <SelectItem value="Hợp tác kinh doanh">Hợp tác kinh doanh</SelectItem>
+                              <SelectItem value="Tư vấn dự án">
+                                Tư vấn dự án
+                              </SelectItem>
+                              <SelectItem value="Báo giá xây dựng">
+                                Báo giá xây dựng
+                              </SelectItem>
+                              <SelectItem value="Thiết kế kiến trúc">
+                                Thiết kế kiến trúc
+                              </SelectItem>
+                              <SelectItem value="Hợp tác kinh doanh">
+                                Hợp tác kinh doanh
+                              </SelectItem>
                               <SelectItem value="Khác">Khác</SelectItem>
                             </SelectContent>
                           </Select>
@@ -258,9 +306,9 @@ const Contact = () => {
                     )}
                   />
 
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-[#004d99] hover:bg-opacity-90" 
+                  <Button
+                    type="submit"
+                    className="w-full bg-[#004d99] hover:bg-opacity-90"
                     disabled={mutation.isPending}
                   >
                     {mutation.isPending ? "Đang gửi..." : "Gửi Thông Tin"}
@@ -268,6 +316,32 @@ const Contact = () => {
                 </form>
               </Form>
             )}
+
+            <div className="flex flex-wrap gap-2">
+              <div className="w-10 h-10 bg-[#1877f2] text-white flex items-center justify-center rounded-md hover:opacity-90 transition-opacity">
+                <FaFacebook size={20} />
+              </div>
+              <div className="w-10 h-10 bg-[#ff0000] text-white flex items-center justify-center rounded-md hover:opacity-90 transition-opacity">
+                <FaYoutube size={20} />
+              </div>
+              <div className="w-10 h-10 bg-black text-white flex items-center justify-center rounded-md hover:opacity-90 transition-opacity">
+                <FaTiktok size={18} />
+              </div>
+              <div className="w-10 h-10 bg-gradient-to-r from-[#fd5949] to-[#d6249f] text-white flex items-center justify-center rounded-md hover:opacity-90 transition-opacity">
+                <FaInstagram size={20} />
+              </div>
+              <div className="w-10 h-10 bg-[#5865F2] text-white flex items-center justify-center rounded-md hover:opacity-90 transition-opacity">
+                <FaDiscord size={20} />
+              </div>
+              <div className="w-10 h-10 bg-[#1DA1F2] text-white flex items-center justify-center rounded-md hover:opacity-90 transition-opacity">
+                <FaTwitter size={20} />
+              </div>
+            </div>
+
+            {/* Certificate */}
+            <div className="mt-6">
+              <img src={BCT_IMG} alt="Bộ Công Thương" className="h-20" />
+            </div>
           </div>
         </div>
       </div>

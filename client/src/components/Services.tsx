@@ -21,21 +21,22 @@ const Services = () => {
           </h2>
           <div className="w-24 h-1 bg-[#f7a100] mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg">
-            Chúng tôi cung cấp đa dạng các dịch vụ xây dựng chuyên nghiệp với chất lượng cao và giá cả hợp lý.
+            Chúng tôi cung cấp đa dạng các dịch vụ xây dựng chuyên nghiệp với
+            chất lượng cao và giá cả hợp lý.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <div 
-              key={service.id} 
+            <div
+              key={service.id}
               className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition duration-300"
             >
               <div className="h-56 overflow-hidden">
-                <img 
-                  src={service.imageUrl} 
-                  alt={service.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+                <img
+                  src={service.imageUrl}
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 />
               </div>
               <div className="p-6">
@@ -44,17 +45,18 @@ const Services = () => {
                 </h3>
                 <p className="mb-4">{service.description}</p>
                 <ul className="mb-4 space-y-2">
-                  {Array.isArray(service.features) && service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center">
-                      <span className="text-[#f7a100] mr-2">
-                        <CheckIcon size={16} />
-                      </span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
+                  {Array.isArray(service.features) &&
+                    service.features.map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <span className="text-[#f7a100] mr-2">
+                          <CheckIcon size={16} />
+                        </span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
                 </ul>
-                <a 
-                  href="#contact" 
+                <a
+                  href="#footer"
                   className="inline-block font-bold text-[#004d99] hover:text-[#f7a100] transition"
                 >
                   Tìm hiểu thêm <span className="ml-1">→</span>

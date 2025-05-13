@@ -100,14 +100,14 @@ const Testimonials = () => {
           {/* Slider controls */}
           <button 
             onClick={goToPrevSlide}
-            className="absolute top-1/2 -translate-y-1/2 left-4 z-10 bg-white bg-opacity-40 hover:bg-opacity-70 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300"
+            className="absolute top-1/2 -translate-y-1/2 -left-4 z-10 bg-black bg-opacity-40 hover:bg-opacity-70 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300"
             aria-label="Previous testimonial"
           >
             <ChevronLeft size={30} />
           </button>
           <button 
             onClick={goToNextSlide}
-            className="absolute top-1/2 -translate-y-1/2 right-4 z-10 bg-white bg-opacity-40 hover:bg-opacity-70 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300"
+            className="absolute top-1/2 -translate-y-1/2 -right-4 z-10 bg-black bg-opacity-40 hover:bg-opacity-70 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300"
             aria-label="Next testimonial"
           >
             <ChevronRight size={30} />

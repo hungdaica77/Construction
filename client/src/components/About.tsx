@@ -53,7 +53,7 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-[#f7a100] mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg">
-            Công ty Xây dựng Hoàng Long là đơn vị uy tín hàng đầu trong lĩnh vực xây dựng với hơn 15 năm kinh nghiệm trong ngành.
+            Công ty Xây dựng Minh Thanh là đơn vị uy tín hàng đầu trong lĩnh vực xây dựng với hơn 15 năm kinh nghiệm trong ngành.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ const About = () => {
             </div>
 
             <a 
-              href="#contact" 
+              href="#footer" 
               className="inline-block bg-[#004d99] hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-md transition duration-300"
             >
               Liên Hệ Ngay

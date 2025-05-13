@@ -8,17 +8,18 @@ const CTA = () => {
           Bạn Có Dự Án Cần Triển Khai?
         </h2>
         <p className="text-xl mb-8 max-w-3xl mx-auto">
-          Hãy để chúng tôi giúp bạn hiện thực hóa ý tưởng với chất lượng tốt nhất và chi phí hợp lý nhất.
+          Hãy để chúng tôi giúp bạn hiện thực hóa ý tưởng với chất lượng tốt
+          nhất và chi phí hợp lý nhất.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a 
-            href="#contact" 
+          <a
+            href="#footer"
             className="bg-[#f7a100] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-md transition duration-300"
           >
             Liên Hệ Ngay
           </a>
-          <a 
-            href="#services" 
+          <a
+            href="#services"
             className="bg-transparent border-2 border-white hover:bg-white hover:text-[#004d99] text-white font-bold py-3 px-8 rounded-md transition duration-300"
           >
             Dịch Vụ Của Chúng Tôi
