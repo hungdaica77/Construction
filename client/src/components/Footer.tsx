@@ -167,9 +167,9 @@ const Footer = () => {
         <hr className="border-gray-700 mb-8" />
         
         {/* Copyright */}
-        <div className="text-center text-sm text-gray-400">
-          <p>
-            &copy; {new Date().getFullYear()} Công Ty Xây Dựng Hoàng Long. Tất cả quyền được bảo lưu.
+        <div className="text-center text-sm bg-[#1a1a1a] py-4 rounded-md">
+          <p className="text-white">
+            &copy; {new Date().getFullYear()} <span className="font-semibold text-[#f7a100]">Công Ty Xây Dựng Hoàng Long</span>. Tất cả quyền được bảo lưu.
           </p>
         </div>
       </div>
