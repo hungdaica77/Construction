@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
@@ -33,11 +32,9 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/">
-              <a className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300">
-                Trang chủ
-              </a>
-            </Link>
+            <a href="/" className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300">
+              Trang chủ
+            </a>
             <a href="#about" className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300">
               Giới thiệu
             </a>
@@ -70,11 +67,13 @@ const Header = () => {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden pb-4">
-            <Link href="/">
-              <a onClick={() => setIsMenuOpen(false)} className="block py-2 font-medium text-neutral-dark hover:text-[#004d99]">
-                Trang chủ
-              </a>
-            </Link>
+            <a 
+              href="/" 
+              onClick={() => setIsMenuOpen(false)} 
+              className="block py-2 font-medium text-neutral-dark hover:text-[#004d99]"
+            >
+              Trang chủ
+            </a>
             <a 
               href="#about" 
               onClick={() => setIsMenuOpen(false)}

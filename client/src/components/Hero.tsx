@@ -36,7 +36,7 @@ const slides = [
 ];
 
 const Hero = () => {
-  const { currentIndex, goToSlide, goToNextSlide } = useSlider(slides.length, 5000, true);
+  const { currentIndex, goToSlide, goToNextSlide, goToPrevSlide } = useSlider(slides.length, 5000, true);
 
   return (
     <section className="relative">
@@ -74,9 +74,25 @@ const Hero = () => {
             </div>
           </div>
         ))}
+        
+        {/* Previous/Next buttons */}
+        <button 
+          onClick={goToPrevSlide}
+          className="absolute top-1/2 -translate-y-1/2 left-4 z-20 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full focus:outline-none"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft size={24} />
+        </button>
+        <button 
+          onClick={goToNextSlide}
+          className="absolute top-1/2 -translate-y-1/2 right-4 z-20 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full focus:outline-none"
+          aria-label="Next slide"
+        >
+          <ChevronRight size={24} />
+        </button>
       </div>
 
-      {/* Slider navigation */}
+      {/* Slider navigation dots */}
       <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-3">
         {slides.map((_, index) => (
           <button

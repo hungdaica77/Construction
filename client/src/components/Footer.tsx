@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import { Facebook, Twitter, Linkedin, Youtube, ChevronRight } from "lucide-react";
 
 const Footer = () => {
@@ -49,12 +48,13 @@ const Footer = () => {
             <h3 className="text-xl font-bold font-roboto mb-6">Liên Kết Nhanh</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/">
-                  <a className="hover:text-[#f7a100] transition duration-300">
-                    <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
-                    Trang chủ
-                  </a>
-                </Link>
+                <a 
+                  href="/" 
+                  className="hover:text-[#f7a100] transition duration-300"
+                >
+                  <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
+                  Trang chủ
+                </a>
               </li>
               <li>
                 <a href="#about" className="hover:text-[#f7a100] transition duration-300">
