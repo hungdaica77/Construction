@@ -167,7 +167,7 @@ const Footer = () => {
         <hr className="border-white border-opacity-20 mb-8" />
         
         {/* Copyright */}
-        <div className="text-center text-sm text-white text-opacity-70">
+        <div className="text-center text-sm text-white">
           <p>
             &copy; {new Date().getFullYear()} Công Ty Xây Dựng Hoàng Long. Tất cả quyền được bảo lưu.
           </p>
