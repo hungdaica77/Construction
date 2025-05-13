@@ -3,12 +3,12 @@ import { Facebook, Twitter, Linkedin, Youtube, ChevronRight } from "lucide-react
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-dark text-white pt-16 pb-8">
+    <footer className="bg-neutral-dark pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
-          <div>
-            <h3 className="text-xl font-bold font-roboto mb-6">CÔNG TY XÂY DỰNG HOÀNG LONG</h3>
+          <div className="text-white">
+            <h3 className="text-xl font-bold font-roboto mb-6 text-white">CÔNG TY XÂY DỰNG HOÀNG LONG</h3>
             <p className="mb-4">
               Với hơn 15 năm kinh nghiệm, chúng tôi tự hào là đơn vị xây dựng uy tín hàng đầu tại Việt Nam.
             </p>
@@ -45,43 +45,43 @@ const Footer = () => {
           </div>
           
           {/* Quick Links */}
-          <div>
-            <h3 className="text-xl font-bold font-roboto mb-6">Liên Kết Nhanh</h3>
+          <div className="text-white">
+            <h3 className="text-xl font-bold font-roboto mb-6 text-white">Liên Kết Nhanh</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/">
-                  <a className="hover:text-[#f7a100] transition duration-300">
+                  <span className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300 cursor-pointer">
                     <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                     Trang chủ
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#about" className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Giới thiệu
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Dịch vụ
                 </a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#projects" className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Dự án
                 </a>
               </li>
               <li>
-                <a href="#team" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#team" className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Đội ngũ
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#contact" className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Liên hệ
                 </a>
@@ -90,41 +90,41 @@ const Footer = () => {
           </div>
           
           {/* Services */}
-          <div>
-            <h3 className="text-xl font-bold font-roboto mb-6">Dịch Vụ</h3>
+          <div className="text-white">
+            <h3 className="text-xl font-bold font-roboto mb-6 text-white">Dịch Vụ</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Xây dựng dân dụng
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Xây dựng công nghiệp
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Thiết kế nội thất
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Tư vấn thiết kế
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Cho thuê thiết bị
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#f7a100] transition duration-300">
+                <a href="#services" className="flex items-center text-gray-300 hover:text-[#f7a100] transition duration-300">
                   <ChevronRight size={16} className="inline-block mr-2 text-[#f7a100]" /> 
                   Công trình giao thông
                 </a>
@@ -133,8 +133,8 @@ const Footer = () => {
           </div>
           
           {/* Newsletter */}
-          <div>
-            <h3 className="text-xl font-bold font-roboto mb-6">Đăng Ký Nhận Tin</h3>
+          <div className="text-white">
+            <h3 className="text-xl font-bold font-roboto mb-6 text-white">Đăng Ký Nhận Tin</h3>
             <p className="mb-4">
               Đăng ký để nhận thông tin mới nhất về dịch vụ và dự án của chúng tôi.
             </p>
@@ -158,16 +158,16 @@ const Footer = () => {
                 </button>
               </div>
             </form>
-            <p className="text-sm">
+            <p className="text-sm text-gray-300">
               Chúng tôi cam kết không gửi spam và bảo mật thông tin của bạn.
             </p>
           </div>
         </div>
         
-        <hr className="border-white border-opacity-20 mb-8" />
+        <hr className="border-gray-700 mb-8" />
         
         {/* Copyright */}
-        <div className="text-center text-sm text-white text-opacity-70">
+        <div className="text-center text-sm text-gray-400">
           <p>
             &copy; {new Date().getFullYear()} Công Ty Xây Dựng Hoàng Long. Tất cả quyền được bảo lưu.
           </p>
