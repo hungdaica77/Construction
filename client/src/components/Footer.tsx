@@ -118,13 +118,6 @@ const Footer = () => {
         </div>
         
         <hr className="border-gray-200 mb-6" />
-        
-        {/* Copyright */}
-        <div className="text-center py-4 bg-[#222] rounded-md">
-          <p className="text-white text-sm">
-            © {new Date().getFullYear()} <span className="text-[#f7a100] font-medium">Công Ty Xây Dựng Hoàng Long</span>. Tất cả quyền được bảo lưu.
-          </p>
-        </div>
       </div>
     </footer>
   );

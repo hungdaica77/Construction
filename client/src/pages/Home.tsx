@@ -5,7 +5,6 @@ import Projects from "@/components/Projects";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
-import CTA from "@/components/CTA";
 import { Helmet } from "react-helmet";
 
 const Home = () => {
@@ -25,7 +24,6 @@ const Home = () => {
       <Projects />
       <Team />
       <Testimonials />
-      <CTA />
       <Contact />
     </>
   );
