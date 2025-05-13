@@ -95,6 +95,10 @@ html {
   background-color: #f5f5f5;
 }
 
+.bg-neutral-dark {
+  background-color: #222222;
+}
+
 .text-neutral-dark {
   color: #333333;
 }

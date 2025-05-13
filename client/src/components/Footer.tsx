@@ -158,7 +158,7 @@ const Footer = () => {
                 </button>
               </div>
             </form>
-            <p className="text-sm">
+            <p className="text-sm text-white">
               Chúng tôi cam kết không gửi spam và bảo mật thông tin của bạn.
             </p>
           </div>
@@ -167,8 +167,8 @@ const Footer = () => {
         <hr className="border-white border-opacity-20 mb-8" />
         
         {/* Copyright */}
-        <div className="text-center text-sm text-white">
-          <p>
+        <div className="text-center text-sm">
+          <p className="text-white font-medium">
             &copy; {new Date().getFullYear()} Công Ty Xây Dựng Hoàng Long. Tất cả quyền được bảo lưu.
           </p>
         </div>
