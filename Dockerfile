@@ -26,7 +26,7 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build /app/dist/public/ /usr/share/nginx/html
 
 # (Nếu bạn dùng React Router, cần file cấu hình NGINX)
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose cổng
 EXPOSE 80
