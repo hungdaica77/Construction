@@ -26,11 +26,16 @@ const Header = () => {
         isScrolled ? "shadow-md" : ""
       } transition-shadow duration-300`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 cursor-pointer">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl md:text-3xl font-bold font-roboto flex items-center gap-2">
+            <div
+              className="text-2xl md:text-3xl font-bold font-roboto flex items-center gap-2"
+              onClick={() => {
+                window.location.href = "/";
+              }}
+            >
               <img
                 src={logo}
                 alt="Construction Connect Logo"
@@ -43,11 +48,13 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/">
-              <a
-                href="/"
-                className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300"
-              >
+            <Link
+              href="/"
+              onClick={() => {
+                window.location.href = "/";
+              }}
+            >
+              <a className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300">
                 Trang chủ
               </a>
             </Link>

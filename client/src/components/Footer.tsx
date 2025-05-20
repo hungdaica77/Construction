@@ -28,19 +28,16 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-[#004d99] font-bold text-lg mb-4">
-              CÔNG TY TNHH XÂY DỰNG VÀ VẬN TẢI
+              CÔNG TY XÂY DỰNG VÀ VẬN TẢI
               <span className="text-[#f7a100] font-bold text-lg ml-1">
-                MINH THANH
+                MINH THANH (TNHH)
               </span>
             </h3>
 
             <p className="flex items-start mb-3 text-gray-700 text-sm">
-              <BookAudio
-                className="text-[#004d99] mr-3 mt-1 flex-shrink-0"
-                size={20}
-              />
-              MST: 12345678 do Sở Kế hoạch và Đầu tư Thành phố Hải Dương cấp
-              ngày 01/01/2020
+              <BookAudio className="text-[#004d99] mr-3 mt-1" size={20} />
+              MST: 0800263826 do Sở Kế hoạch và Đầu tư Hải Dương cấp ngày
+              06/02/2002
             </p>
 
             <div className="flex items-start mb-3">
@@ -53,10 +50,10 @@ const Footer = () => {
             <div className="flex items-center mb-3">
               <Mail className="text-[#004d99] mr-3 flex-shrink-0" size={20} />
               <a
-                href="mailto:MinhThanhconstruction.vn.com"
+                href="mailto:MinhThanhLTD.com"
                 className="text-sm text-gray-700 hover:text-[#f7a100]"
               >
-                MinhThanhConstruction.com
+                MinhThanhLTD.com
               </a>
             </div>
 
