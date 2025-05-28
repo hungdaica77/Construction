@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Medal, Users, Clock, Handshake } from "lucide-react";
 import type { CompanyStats } from "@shared/schema";
+import image1 from "../image/construction/0e0cc1e17155c40b9d44.jpg";
 
 const About = () => {
   // Fetch company statistics
@@ -15,10 +16,10 @@ const About = () => {
 
   // Default stats if API fails
   const defaultStats = {
-    experienceYears: 15,
-    completedProjects: 200,
+    experienceYears: 20,
+    completedProjects: 10000,
     professionalEngineers: 50,
-    satisfiedClients: 180,
+    satisfiedClients: 1800,
   };
 
   // Use the fetched data or default values if API fails
@@ -65,7 +66,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              src={image1}
               alt="Công trình xây dựng hiện đại"
               className="rounded-lg shadow-lg w-full h-auto"
             />

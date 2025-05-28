@@ -76,12 +76,12 @@ const Header = () => {
             >
               Dự án
             </a>
-            <a
+            {/* <a
               href="#team"
               className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300"
             >
               Đội ngũ
-            </a>
+            </a> */}
             <a
               href="#footer"
               className="font-medium text-neutral-dark hover:text-[#004d99] transition duration-300"

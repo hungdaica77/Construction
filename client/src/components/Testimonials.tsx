@@ -1,22 +1,29 @@
 import { useState, useRef, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  CircleUser,
+  CircleUserRound,
+  Star,
+} from "lucide-react";
 import { Testimonial } from "@shared/schema";
 import { testimonialData } from "@/lib/data";
 import { useSlider } from "@/lib/hooks/useSlider";
+import {} from "lucide-react";
 
 const Testimonials = () => {
   // Fetch testimonials data from API
   const { data, isLoading, error } = useQuery<Testimonial[]>({
     queryKey: ["/api/testimonials"],
   });
-  
+
   // Use API data or fallback to static data
   const testimonials = data || testimonialData;
-  
+
   // Calculate how many slides to show based on screen size
   const [slidesToShow, setSlidesToShow] = useState(3);
-  
+
   // Handle responsive behavior
   useEffect(() => {
     const handleResize = () => {
@@ -28,19 +35,19 @@ const Testimonials = () => {
         setSlidesToShow(1); // Mobile - 1 slide
       }
     };
-    
+
     window.addEventListener("resize", handleResize);
     handleResize(); // Initial check
-    
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  
+
   // Setup slider functionality
   const { currentIndex, goToSlide, goToNextSlide, goToPrevSlide } = useSlider(
     Math.max(0, testimonials.length - slidesToShow + 1),
     5000
   );
-  
+
   return (
     <section className="py-16 bg-neutral-light">
       <div className="container mx-auto px-4">
@@ -50,45 +57,57 @@ const Testimonials = () => {
           </h2>
           <div className="w-24 h-1 bg-[#f7a100] mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg">
-            Sự hài lòng của khách hàng luôn là thước đo cho thành công của chúng tôi.
+            Sự hài lòng của khách hàng luôn là thước đo cho thành công của chúng
+            tôi.
           </p>
         </div>
-        
+
         <div className="testimonial-slider relative">
           <div className="overflow-hidden">
-            <div 
+            <div
               className="testimonial-slides flex transition-transform duration-500"
-              style={{ transform: `translateX(-${currentIndex * (100 / slidesToShow)}%)` }}
+              style={{
+                transform: `translateX(-${
+                  currentIndex * (100 / slidesToShow)
+                }%)`,
+              }}
             >
               {testimonials.map((testimonial) => (
-                <div 
-                  key={testimonial.id} 
+                <div
+                  key={testimonial.id}
                   className={`testimonial-slide flex-shrink-0 px-4`}
                   style={{ width: `${100 / slidesToShow}%` }}
                 >
                   <div className="bg-white p-8 rounded-lg shadow-lg h-full">
                     <div className="text-[#f7a100] mb-4 flex">
                       {[...Array(5)].map((_, i) => (
-                        <Star 
-                          key={i} 
-                          size={20} 
-                          fill={i < testimonial.rating ? "#f7a100" : "none"} 
-                          className={i < testimonial.rating ? "text-[#f7a100]" : "text-gray-300"} 
+                        <Star
+                          key={i}
+                          size={20}
+                          fill={i < testimonial.rating ? "#f7a100" : "none"}
+                          className={
+                            i < testimonial.rating
+                              ? "text-[#f7a100]"
+                              : "text-gray-300"
+                          }
                         />
                       ))}
                     </div>
                     <p className="italic mb-6">{testimonial.content}</p>
                     <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+                      <CircleUserRound size={40} className="mr-4" />
+                      {/* <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                         <img 
                           src={testimonial.imageUrl} 
                           alt={testimonial.name} 
                           className="w-full h-full object-cover" 
                         />
-                      </div>
+                      </div> */}
                       <div>
                         <h4 className="font-bold">{testimonial.name}</h4>
-                        <p className="text-sm text-gray-600">{testimonial.position}</p>
+                        {/* <p className="text-sm text-gray-600">
+                          {testimonial.position}
+                        </p> */}
                       </div>
                     </div>
                   </div>
@@ -96,26 +115,28 @@ const Testimonials = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Slider controls */}
-          <button 
+          <button
             onClick={goToPrevSlide}
             className="absolute top-1/2 -translate-y-1/2 -left-4 z-10 bg-black bg-opacity-40 hover:bg-opacity-70 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300"
             aria-label="Previous testimonial"
           >
             <ChevronLeft size={30} />
           </button>
-          <button 
+          <button
             onClick={goToNextSlide}
             className="absolute top-1/2 -translate-y-1/2 -right-4 z-10 bg-black bg-opacity-40 hover:bg-opacity-70 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300"
             aria-label="Next testimonial"
           >
             <ChevronRight size={30} />
           </button>
-          
+
           {/* Dots navigation */}
           <div className="flex justify-center mt-8 space-x-2">
-            {[...Array(Math.max(0, testimonials.length - slidesToShow + 1))].map((_, i) => (
+            {[
+              ...Array(Math.max(0, testimonials.length - slidesToShow + 1)),
+            ].map((_, i) => (
               <button
                 key={i}
                 onClick={() => goToSlide(i)}

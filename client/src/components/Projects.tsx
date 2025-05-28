@@ -110,16 +110,20 @@ const Projects = () => {
                   </a>
                 </div> */}
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold font-roboto text-[#004d99] mb-2">
-                  {project.title}
-                </h3>
-                <p className="mb-3 text-sm text-gray-600">
-                  <MapPin size={16} className="inline text-[#f7a100] mr-2" />
-                  {project.location}
-                </p>
-                <p className="mb-4">{project.description}</p>
-                <div className="flex items-center justify-between">
+              <div className="p-6 flex justify-between flex-col">
+                <div>
+                  <h3 className="text-xl font-bold font-roboto text-[#004d99] mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="mb-3 text-sm text-gray-600">
+                    <MapPin size={16} className="inline text-[#f7a100] mr-2" />
+                    {project.location}
+                  </p>
+
+                  <p className="mb-4">{project.description}</p>
+                </div>
+
+                {/* <div className="flex items-center justify-between">
                   <span className="text-sm font-medium">
                     Hoàn thành: {project.completionYear}
                   </span>
@@ -129,7 +133,7 @@ const Projects = () => {
                   >
                     Chi Tiết <span className="ml-1">→</span>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
